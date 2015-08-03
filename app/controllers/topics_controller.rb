@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all
-    
+
   end
 
   # GET /topics/1
@@ -75,7 +75,7 @@ class TopicsController < ApplicationController
   end
 
   def score
-    self.get_upvote.size - self.get_downvote.size
+    @topic.upvote.size - @topic.downvote.size
   end
 
   private

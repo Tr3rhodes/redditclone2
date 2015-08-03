@@ -2,13 +2,19 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @topic.title %>
+  <%= link_to @topic.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Summary:</strong>
   <%= @topic.description %>
 </p>
+
+
+
+    <span class="timestamp">
+        Posted <%= time_ago_in_words(@topic.created_at) %> ago.
+    </span>
 
 
 

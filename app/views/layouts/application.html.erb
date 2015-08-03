@@ -9,29 +9,37 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
-
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"> -->
+<link href="css/scaffolds.scss" rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="page-header">
-   <h1>reddit clone
-      <small>by: Emanuel Rhodes III</small>
-   </h1>
-</div>
+  <div id="page"
+    <header>
+      <nav>
+        <h1>reddit clone
+          <small>by: Emanuel Rhodes III</small>
+        </h1>
+      </nav>
+    </header>
 
-<%= yield %>
 
+      <%= yield %>
 
+    <aside>
+      
+    </aside>
 
-
+    <footer>
+      <p class="copyright text-muted">Copyright &copy; Your Website 2015</p>
+    </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap.min.js"></script>
 
-</ul><br>
+ </div>
 </body>
 
 </html>
