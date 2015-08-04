@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :topics do
     member do
       post 'upvote'
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   resources :users
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+
+  mount Commontator::Engine => '/commontator'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
@@ -39,6 +43,8 @@ Rails.application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
+
+
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
